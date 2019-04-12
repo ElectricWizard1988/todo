@@ -119,7 +119,8 @@ li:hover {
 }
 
 #clear-btn {
-    float: left;
+    display: block;
+    margin: auto;
 }
 
 .checked {

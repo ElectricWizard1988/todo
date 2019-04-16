@@ -114,7 +114,6 @@ li:hover {
 
 #clear-btn {
     display: block;
-    visibility: hidden;
     margin: auto;
     margin-bottom: 1%;
 }
@@ -133,6 +132,7 @@ li:hover {
 }
 
 #scroll-to-top {
+    display: none;
     position: fixed; 
     bottom: 20px; 
     right: 30px; 

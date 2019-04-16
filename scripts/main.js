@@ -13,7 +13,7 @@ document.getElementById("add-btn").addEventListener("click", function() {
   var textInput = document.getElementById("list-entry").value;
   var node = document.createElement("LI");
   node.setAttribute("class", "default-cursor");
-
+  node.setAttribute("class", "li-element");
   // Give each element a unique ID
   var items = document.querySelectorAll("#list li");
   for (let i = 0; i <= items.length; i++) {
@@ -42,7 +42,8 @@ document.getElementById("add-btn").addEventListener("click", function() {
   var span = document.createElement("BUTTON");
   span.setAttribute("id", "appendedBtn");
   span.setAttribute("onclick", "elementId()");
-  var txt = document.createTextNode("\u00D7");
+  var crossEmoji = innerText = String.fromCodePoint(0x274C);
+  var txt = document.createTextNode(crossEmoji);
   span.className = "close";
   span.appendChild(txt);
   node.appendChild(span);
@@ -109,3 +110,11 @@ window.onload = function() {
       document.documentElement.scrollTop = 0;
     });
 };
+
+var checkElementExists = document.getElementsByClassName("li-element");
+if (typeof(checkElementExists) === null || typeof(checkElementExists) === "undefined")
+{
+  document.getElementById("clear-btn").style.visibility = "visible";
+} else {
+  document.getElementById("clear-btn").style.visibility = "hidden";
+}

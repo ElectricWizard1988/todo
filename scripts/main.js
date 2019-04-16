@@ -110,11 +110,3 @@ window.onload = function() {
       document.documentElement.scrollTop = 0;
     });
 };
-
-var checkElementExists = document.getElementsByClassName("li-element");
-if (typeof(checkElementExists) === null || typeof(checkElementExists) === "undefined")
-{
-  document.getElementById("clear-btn").style.visibility = "visible";
-} else {
-  document.getElementById("clear-btn").style.visibility = "hidden";
-}

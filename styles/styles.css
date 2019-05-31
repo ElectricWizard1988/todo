@@ -146,3 +146,7 @@ li:hover {
     background-color: #9bcbcf;
     box-shadow: inset 0px 0px 2px black;
 }
+
+html {
+    scroll-behavior: smooth;
+  } 

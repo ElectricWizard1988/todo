@@ -1,7 +1,7 @@
 // Enable the enter key to submit a new item from the input field.
 var inputField = document.getElementById("list-entry");
 
-inputField.addEventListener("keyup", function(event) {
+inputField.addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
     event.preventDefault();
     document.getElementById("add-btn").click();
@@ -9,7 +9,7 @@ inputField.addEventListener("keyup", function(event) {
 });
 
 // Create a new item for the list
-document.getElementById("add-btn").addEventListener("click", function() {
+document.getElementById("add-btn").addEventListener("click", function () {
   var textInput = document.getElementById("list-entry").value;
   var node = document.createElement("LI");
   node.setAttribute("class", "default-cursor");
@@ -17,7 +17,7 @@ document.getElementById("add-btn").addEventListener("click", function() {
   // Give each element a unique ID
   var items = document.querySelectorAll("#list li");
   for (let i = 0; i <= items.length; i++) {
-    var uniqueId = function() {
+    var uniqueId = function () {
       i = Math.random()
         .toString(36)
         .substr(2, 16);
@@ -62,7 +62,7 @@ function elementId() {
 // Saving to localStorage
 var getList = document.querySelector("ul");
 
-window.onbeforeunload = function() {
+window.onbeforeunload = function () {
   localStorage.setItem("recallListItems", getList.innerHTML);
 };
 
@@ -73,7 +73,7 @@ if (saved) {
 }
 
 // Clear button
-document.getElementById("clear-btn").addEventListener("click", function() {
+document.getElementById("clear-btn").addEventListener("click", function () {
   if (
     confirm("This will clear everything in the To-Do list. \n \n Are you sure?")
   ) {
@@ -85,7 +85,7 @@ document.getElementById("clear-btn").addEventListener("click", function() {
 });
 
 // Toggle a LI element when clicked - line-through + colour change
-getList.addEventListener("click", function(event) {
+getList.addEventListener("click", function (event) {
   if (event.target.tagName === "LI") {
     event.target.classList.toggle("checked");
   } else {
@@ -94,7 +94,7 @@ getList.addEventListener("click", function(event) {
 });
 
 // Scroll-to-top button
-window.onscroll = function() {
+window.onscroll = function () {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("scroll-to-top").style.display = "block";
   } else {
@@ -102,10 +102,10 @@ window.onscroll = function() {
   }
 };
 
-window.onload = function() {
+window.onload = function () {
   document
     .getElementById("scroll-to-top")
-    .addEventListener("click", function() {
+    .addEventListener("click", function () {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     });

@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #97ccd1;
@@ -61,11 +65,11 @@ h2 {
     cursor: pointer;
     background-color: #97ccd1;
     outline: 0;
+    box-shadow: 1px 1px 1px #555555;
 }
 
-.btn-style:hover {
-    background-color: #9bcbcf;
-    box-shadow: inset 0px 0px 2px black;
+.btn-style:active {
+    box-shadow: .5px .5px .5px #555555;
 }
 
 .list-style {
@@ -75,7 +79,6 @@ h2 {
 }
 
 ul {
-    list-style: none;
     margin: 25px;
     display: inline-block;
     text-align: left;
@@ -84,6 +87,7 @@ ul {
 }
 
 li {
+    list-style: none;
     background-color: #d2e9eb;
     border-radius: 8px;
     margin:0 0 10px 0;
@@ -101,15 +105,16 @@ li:hover {
 
 #appendedBtn {
     margin-left: 8px;
-    font-size: 30px;
+    font-size: 18px;
     cursor: pointer;
     background: transparent;
     border: none;
-    font-size: 20px;
+    vertical-align: middle;
+    float: right;
 }
 
 #appendedBtn:hover {
-    font-size: 21px;
+    transform: scale(1.1);
 }
 
 #clear-btn {
@@ -144,9 +149,4 @@ li:hover {
 
 #scroll-to-top:hover {
     background-color: #9bcbcf;
-    box-shadow: inset 0px 0px 2px black;
 }
-
-html {
-    scroll-behavior: smooth;
-  } 
